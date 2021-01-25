@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" defer>
+    <script src="https://kit.fontawesome.com/96d3fd8f4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="cart.js" defer></script>
+    <script src="form.js" defer></script>
+    <title>Panier</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="flecheRetour">
+            <span>
+                <i class="fas fa-arrow-left"></i>
+            </span>
+        </a>
+        <div class="logo">
+           <h1 class="title">Orinoco</h1> 
+        </div>
+        <a href="cart.html" id="panier">
+            <span>
+                <i class="fa fa-shopping-cart"></i>
+            </span>
+        </a>
+    </header>
+    <main>
+        <section id="panierFull">
+            <div id="main">    
+            </div>
+            <div id = "prixTotal">
+                <span>Prix total:</span>
+                <span id="sum"></span>
+            </div>
+            <button type="submit" id="btnCommander">Commander</button>
+        </section>
+        <section id="formContainer">
+            <h2>Formulaire de commande</h2>
+            <!--Formulaire ici-->
+            <form method="POST" id="form">
+                <fieldset>
+                    <div class="formPart">
+                        <label for="prénom">Prénom</label>
+                        <input type="text" name="prénom" id="firstName" required>
+                    </div>
+                    <div class="formPart">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="name" required>
+                   </div>
+                   <div class="formPart">
+                        <label for="adresse">Adresse de livraison</label>
+                        <input type="text" name="adresse" id="adresse" required>
+                   </div>
+                   <div class="formPart">
+                        <label for="city">Ville</label>
+                        <input type="text" name="city" id="city" required>
+                   </div>
+                   <div class="formPart">
+                        <label for="mail">Adresse mail</label>
+                        <input type="email" name="mail" id="email" required>
+                   </div>
+                   <button id="formButton" type="submit">Finaliser la commande</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
