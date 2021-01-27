@@ -30,32 +30,54 @@ let img = document.createElement('img');
 img.className = 'w-50';
 img.src = data.imageUrl;
 article.appendChild(img);
+//creation d'une div pour les specificitées
+let specs = document.createElement('div');
+specs.id ='desPrNo';
+article.appendChild(specs);
 // Ajout du noms
 let nameDiv = document.createElement('p');
 nameDiv.innerHTML = data.name;
-article.appendChild(nameDiv);
+specs.appendChild(nameDiv);
 //ajout des prix
 let priceDiv = document.createElement('p');
 priceDiv.className = 'price';
 priceDiv.innerHTML = data.price;
-article.appendChild(priceDiv);
+specs.appendChild(priceDiv);
 //Description
 let description = document.createElement('p');
 description.innerHTML = data.description;
 console.log(data.description);
-article.appendChild(description);
+specs.appendChild(description);
 //Ajout des options
-let selectBtn =  document.getElementById('selectColors');//balise select
+//let selectBtn =  document.getElementById('selectColors');
+let divInputs = document.createElement('div');
+divInputs.className ='inputs';
+specs.appendChild(divInputs);
+//Input quantité
+let inputs = document.createElement('input');
+inputs.type = 'number';
+inputs.min = '1';
+inputs.id = 'quantite';
+inputs.name = 'Quantité'
+inputs.value = '1';
+divInputs.appendChild(inputs);
+//Colors
+let colors = document.createElement('select');
+colors.name = 'colors';
+divInputs.appendChild(colors);
+//
 let teddieColors = data.colors;//recupe des choix de couleurs
-console.log(teddieColors)
-teddieColors.map(colors => {
+teddieColors.map(color => {
     let optionColor = document.createElement('option')
-    optionColor.value = colors;
-    optionColor.innerHTML = colors;
-    selectBtn.appendChild(optionColor);
+    optionColor.value = color;
+    optionColor.innerHTML = color;
+    colors.appendChild(optionColor);
     });
 //Bouton ajout panier
-ajoutPanier = document.getElementById('btnAjouter');
+let ajoutPanier = document.createElement('button');
+ajoutPanier.id = 'btnAjouter';
+ajoutPanier.innerHTML = 'Ajouter au panier'
+specs.appendChild(ajoutPanier);
 ajoutPanier.addEventListener('click', () => addToCart(data));
 };
 

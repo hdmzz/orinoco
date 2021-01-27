@@ -3,8 +3,6 @@ let formSection = document.getElementById('formContainer');
 formSection.setAttribute ('style', 'display:none;');
 let mainConteneur = document.getElementById('main');
 const showCartShopping = teddie => {
-    console.log('showCartShopping bien appelé')
-    console.log(teddie.name);
     let containeur = document.createElement('div');
     containeur.className = 'ligne'
     let img = document.createElement('img');
@@ -45,14 +43,13 @@ const showCartShopping = teddie => {
    console.log(panier);
 } */
 
-let priceSum = 0;
-const totalPrice = (teddie) => {
+
+/* const totalPrice = (teddie) => {
     let singlePrice = parseInt(teddie.price);
     priceSum += singlePrice;
-    console.log(priceSum);
     let priceTotalContainer = document.getElementById('sum');
     priceTotalContainer.innerHTML = priceSum;
-}
+} */
 
 panier.map(teddie => showCartShopping(teddie));
 
