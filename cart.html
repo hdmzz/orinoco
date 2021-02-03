@@ -13,62 +13,65 @@
 </head>
 <body>
     <header>
-        <a href="index.html" id="flecheRetour">
-            <span>Accueil</span>
-        </a>
         <div class="logo">
-           <h1 class="title">Orinoco</h1> 
+            <h1 class="title">Orinoco</h1> 
         </div>
-        <a href="cart.html" id="panier">
-            <span>
-                <i class="fa fa-shopping-cart"></i>
-            </span>
-        </a>
+        <nav>
+            <ul class="d-flex justify-content-around list-unstyled">
+                <li><a href="index.html" class="nav-link active h6">Accueil</a></li>
+                <li><a href="cart.html" class="nav-link active h6">Panier</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="panierFull">
-            <div id="main">    
+            <div id="main" class="container">    
             </div>
-            <div id = "prixTotal">
-                <span>Prix total:</span>
-                <span id="sum"></span>
+            <div class="container">
+                <div id = "prixTotal" class="bg-dark mb-1 text-white row">
+                    <span id="sum"></span>
+                </div>
             </div>
-            <button type="submit" id="btnCommander">Commander</button>
+            <div class="d-flex justify-content-center">
+                <button type="submit" id="btnCommander" class="btn btn-primary ">Commander</button>
+            </div>
         </section>
         <section id="formContainer">
             <h2>Formulaire de commande</h2>
             <!--Formulaire ici-->
-            <form method="POST" id="form">
-                <fieldset>
-                    <div class="formPart">
-                        <label for="firstName">Prénom</label>
-                        <input type="text" name="firstName" id="firstName" required='required' minlength="2" max="3">
+            <form id="form" class="m-4" method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName">Prénom :</label>
+                        <input type="text" name="firstName" id="firstName" class="form-control" required='required' maxlength="25" pattern="[a-zA-Zàäâçéèëêïîôöùû -]{2,25}">
                     </div>
-                    <div class="formPart">
-                        <label for="lastName">Nom</label>
-                        <input type="text" name="lastName" id="lastName" required='required' data-rule-minlength="2">
-                   </div>
-                   <div class="formPart">
-                        <label for="address">Adresse de livraison</label>
-                        <input type="text" name="address" id="address" required='required' data-rule-minlength="2">
-                   </div>
-                   <div class="formPart">
-                        <label for="city">Ville</label>
-                        <input type="text" name="city" id="city" required='required' data-rule-minlength="2">
-                   </div>
-                   <div class="formPart">
-                        <label for="email">Adresse mail</label>
-                        <input type="email" name="email" id="email" required='required' data-rule-minlength="2">
-                   </div>
-                    <a id="recupOrderId">
-                        <button id="formButton" type="submit">Finaliser la commande</button>
-                    </a>
-                </fieldset>
+                    <div class="form-group col-md-6">
+                        <label for="lastName">Nom :</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control" required='required'  maxlength="25" pattern="[a-zA-Zàäâçéèëêïîôöùû -]{2,25}">
+                </div>
+                </div>
+                <div class="form-group">
+                        <label for="address">Adresse de livraison :</label>
+                        <input type="text" name="address" id="address" class="form-control" required='required' pattern="[0-9a-zA-Zàäâçéèëêïîôöùû -]{2,150}">
+                </div>
+                <div class="form-group">
+                        <label for="city">Ville :</label>
+                        <input type="text" name="city" id="city" class="form-control" required='required'  pattern="[A-Za-z -]{2,70}">
+                </div>
+                <div class="form-group">
+                        <label for="email">Adresse mail :</label>
+                        <input type="email" name="email" id="email" class="form-control" required='required' maxlength="70" >
+                </div>
+                <input id="formButton" type="submit" value="Confirmer la commande" class="btn btn-primary">
             </form>
         </section>
     </main>
-    <footer>
-
+    <footer class="bg-secondary mt-1">
+        <ul class="text-white mb-0 d-flex justify-content-around list-unstyled">
+            <li class="my-2">A propos</li>
+            <li class="my-2">Assistance</li>
+            <li class="my-2">Centre d'aide</li>
+        </ul>	
     </footer>
 </body>
 </html>

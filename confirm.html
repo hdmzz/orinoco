@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styleIndx.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" defer>
+    <link rel="stylesheet" href="style/style.css">
     <script src="confirm.js" defer></script>
     <script src="/js/totalPrice.js"></script>
     <title>Confirmation de commande</title>
@@ -15,17 +16,25 @@
         </div>
          </header>
     <main>
-        <div id="confirmCmd">
-            <h2>Confirmation de commande</h2>
-
-        </div>
-        <div class="txtRemerciement">
-            <p>Merci pour votre Commande </p>
-        </div>
-        <div id="reference"></div>
-        <br>
-        <div id="sum"></div>
+        <section class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Confirmation de commande</h2>
+                    <p>Merci pour votre Commande </p>
+                    <p>À très bientôt</p>
+                <div id="reference"></div>
+                <div id="sum"></div>
+                </div>
+                    
+            </div>
+        </section>
     </main>
-    
+    <footer class="bg-secondary mt-1">
+        <ul class="text-white mb-0">
+            <li class="my-2">A propos</li>
+            <li class="my-2">Assistance</li>
+            <li class="my-2">Centre d'aide</li>
+        </ul>	
+    </footer>
 </body>
 </html>

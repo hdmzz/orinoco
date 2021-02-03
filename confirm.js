@@ -7,6 +7,7 @@ ref.innerHTML = `La référence de votre commande est ${orderId}`;
 
 let data = JSON.parse(localStorage.getItem('panier'));
 data.map(teddie => totalPrice(teddie));
+localStorage.clear();
 //totalPrice ok -----------
 
 

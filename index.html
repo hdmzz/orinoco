@@ -3,52 +3,36 @@
     <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Orinoco</title>
         <script type="text/javascript" src="index.js" defer></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" defer>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" defer>
         <link rel="stylesheet" href="style/styleIndx.css">
+        <title>Orinoco</title>
     </head>
     <body>
-        <header>    
-       <div class="logo">
-          <h1 class="title">Orinoco</h1> 
-       </div>
-       <!-- <div class="iconShopping">
-            <a class="iconShopping" href="cart.html">
-                <i class="fa fa-shopping-cart"></i>
-            </a>
-        </div> -->
+        <header>
+            <div class="headerContainer">   
+                <div class="logo">
+                    <h1 class="title">Orinoco</h1> 
+                </div>
+                <nav>
+                    <a class="nav-link active h6" href="cart.html">Panier</a>
+                </nav>
+            </div> 
         </header>
-        <main >
-
+        <main>
         <div class="container">
-            <div id='main' class="row">
-
+            <div id='main' class="row justify-content-center d-flex">
             </div>
         </div>
-        <!--
-            <div id="name">
-
-            </div>
-            <div id="prix">
-
-            </div> -->
-      <!-- nous voulons creer pour chaque element du tableaux une imege avec la src
-    de l'image d'un teddie -->
-
         </main>
-        <footer class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
-            <div class="container bloc-sm">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h2 class="titleFooter">
-                            Orinoco<br>
-                        </h2>
-                    </div>
-                </div>
-            </div>
+        <footer class="bg-secondary mt-1">
+            <ul class="text-white mb-0 d-flex justify-content-around list-unstyled">
+                <li class="my-2">A propos</li>
+                <li class="my-2">Assistance</li>
+                <li class="my-2">Centre d'aide</li>
+            </ul>	
         </footer>
     </body>
 </html>

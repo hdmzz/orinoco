@@ -10,33 +10,21 @@ let panierSection = document.getElementById('panierFull');
 });
 
 let commandBtn = document.getElementById('formButton');
-//On recupère les données de l'utilisateur que l'on stock dans un objet
 //on constuit un tablau d'id
 let teddieId = [];
 panier.map(teddie => teddieId.push(teddie.id));
-/* console.log(teddieId);
-console.log(JSON.stringify(teddieId)); */
 
-const inputs = document.querySelectorAll("input");
-console.log(inputs);
-const formulaireValid = (input) => {
-    input.addEventListener('input', (event) => {
-        if (!event.target.validity.valid){
-            console.log('erreur')
-        }
-    })
-    
-}
+//----------------------------------------
 
-Array.from(inputs).map(formulaireValid);
-
-commandBtn.addEventListener('click', (event) => {
+//--------------------------------------------
+let form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
+    event.stopImmediatePropagation();
     event.preventDefault();
-    
-   
     cartToSend();
 });
-
+//On recupère les données de l'utilisateur que l'on stock dans un objet avec les ID
+//Puis envoie au serveur avec la fonction send
 const cartToSend = () => {
     contact = {
         firstName: document.getElementById('firstName').value,
@@ -62,14 +50,11 @@ const send = (toSend) => {const url = 'http://localhost:3000/api/teddies/order'
         })
         .then(response => response.json())
         .then(data => {
-            //clearLocalStorage();
             showData(data)
         })
 }
-const clearLocalStorage = () => {
-    localStorage.clear();
-}
+
 const showData = (data) =>{
     console.log(data.orderId);
-    window.location.href = `/confirm.html?orderId=${data.orderId}`;
+    window.location.href = `confirm.html?orderId=${data.orderId}`;
 }
